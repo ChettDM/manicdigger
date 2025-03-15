@@ -5,6 +5,7 @@ output2
 /cito/output
 bin
 obj
+.idea
 /Packet.Serializer.cs
 /ManicDiggerLib/Server/Mods/current.txt
 /Packet.Serializer.ci.cs

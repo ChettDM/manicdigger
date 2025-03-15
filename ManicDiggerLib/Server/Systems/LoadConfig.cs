@@ -87,7 +87,7 @@ namespace ManicDigger.Server
 					//Save with new version.
 					SaveConfig(server);
 				}
-				catch
+				catch (Exception ex)
 				{
 					//ServerConfig is really messed up. Backup a copy, then create a new one.
 					try
@@ -95,7 +95,7 @@ namespace ManicDigger.Server
 						File.Copy(Path.Combine(GameStorePath.gamepathconfig, filename), Path.Combine(GameStorePath.gamepathconfig, filename + ".old"));
 						Console.WriteLine(server.language.ServerConfigCorruptBackup());
 					}
-					catch
+					catch (Exception e)
 					{
 						Console.WriteLine(server.language.ServerConfigCorruptNoBackup());
 					}
